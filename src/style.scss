@@ -1,0 +1,57 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:20px 20px ;
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        list-style: none;
+        &hover{
+            color: #B2904C;
+        }
+        li{
+            font-weight: 700;
+            font-size: 20px;
+           a{
+            color: black;
+            text-decoration: none;
+
+            &:hover{
+                color: #B2904C;
+            }
+           }
+
+            
+        }
+    }
+    button{
+        height: 55px;
+        width: 180px;
+        border-radius: 5px;
+        border: none;
+        background: #B2904C;
+        color: white;
+        font-weight: 750;
+        font-style: normal;
+        text-transform: uppercase;
+        a{
+            color: white;
+            text-decoration: none;
+        &:hover{
+          color: black;
+        }
+        }
+    }
+
+}
