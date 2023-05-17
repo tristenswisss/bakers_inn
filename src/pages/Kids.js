@@ -1,9 +1,9 @@
-
+import Navbar from "../components/Navbar";
 
 const Kids = ()=>{
     return(
-        <h1>about</h1>
+        <Navbar/>
     )
 
 }
-export default Kids
+export default Kids;

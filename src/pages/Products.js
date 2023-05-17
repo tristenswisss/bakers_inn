@@ -1,9 +1,9 @@
-
+import Navbar from "../components/Navbar";
 
 const Products = ()=>{
     return(
-        <h1>about</h1>
+        <Navbar/>
     )
 
 }
-export default Products
+export default Products;

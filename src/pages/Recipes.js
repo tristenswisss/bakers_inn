@@ -1,8 +1,8 @@
-
+import Navbar from "../components/Navbar"
 
 const Recipes = ()=>{
     return(
-        <h1>about</h1>
+      <Navbar/>
     )
 
 }
