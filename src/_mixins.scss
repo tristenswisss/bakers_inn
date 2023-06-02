@@ -1,8 +1,43 @@
 
 @mixin fontFamily{
     font-family: 'avenir_lt_std45_book';
-    src: url('fontsfree-net-avenirltstd-book-webfont.woff2') format('woff2'),
-         url('fontsfree-net-avenirltstd-book-webfont.woff') format('woff');
-    font-weight: normal;
+}
+
+
+@mixin boldFont{
+    font-family: 'avenir_lt_std95_black';
+}
+
+@mixin Home-layout{
+    background-position: center;
+    background-size: cover;
+     height: 78vh;
+     border-radius: 10px;
+     font-family: 'avenir_lt_std95_black';
+     color: white;
+     display: flex;
+     align-items: flex-end;
+     justify-content: space-between;
+     padding: 0 40px 0 40px; /* 40px Left and Right */
+}
+
+@mixin buttonStyle {
+    height: 55px;
+    width: 180px;
+    border-radius: 5px;
+    margin: 20px 0px;
+    border: none;
+    background: #B2904C;
+    color: white;
+    font-weight: 750;
     font-style: normal;
+    text-transform: uppercase;
+    a{
+        color: white;
+        text-decoration: none;
+        @include fontFamily();
+    &:hover{
+      color: black;
+    }
+    }
 }

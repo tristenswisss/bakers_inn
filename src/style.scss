@@ -1,4 +1,4 @@
-
+@import "_mixins";
 
 *{
     margin: 0;
@@ -10,7 +10,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:20px 20px ;
+    margin:20px 40px 10px ;
     ul{
         display: flex;
         justify-content: center;
@@ -20,38 +20,681 @@ nav{
         &hover{
             color: #B2904C;
         }
-        li{
-            font-weight: 700;
-            font-size: 20px;
-           a{
-            color: black;
+        a{
+            color: #261B6C;
+            font-weight: bold
+            ;
             text-decoration: none;
+            @include boldFont();
 
             &:hover{
                 color: #B2904C;
             }
-           }
-
-            
-        }
     }
     button{
-        height: 55px;
-        width: 180px;
+        @include buttonStyle;
+    }
+}
+.fa-brands{
+    color: white;
+    font-size: 40px;
+    margin: 0px 20px;
+}
+.fa-brands:hover{
+    scale: 1.1;
+}
+
+}
+.wrapper{
+    padding:0px 40px;
+
+
+    .billboard{
+        padding: 40px;
+        background-image: url(./images/hero-image.png);
         border-radius: 5px;
-        border: none;
-        background: #B2904C;
-        color: white;
-        font-weight: 750;
-        font-style: normal;
-        text-transform: uppercase;
-        a{
+        height: 83vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1{
             color: white;
-            text-decoration: none;
-        &:hover{
-          color: black;
+            font-size: 47px;
+            margin: 20px 0px;
+            font-family: Montserrat;
         }
+        p{
+            color: white;
+            width: 90%;
+            margin: 20px 0px;
+            @include fontFamily();
+        }
+        button{
+           @include buttonStyle;
+        }
+    }
+    
+      .carousel-items {
+        display: flex;
+        transition: transform 0.5s;
+      }
+      
+      .carousel-items img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+      
+      .carousel-items img.active {
+        transform: scale(1.2);
+      }
+
+}
+.aboutUS{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:70px 0px 50px ;
+    padding: 0 40px 0 40px;
+    h1{
+        font-family:Montserrat;
+    }
+    button{
+        @include buttonStyle;
+    }
+    .aboutUsContent{
+        display: flex;
+    }
+    .headerText{
+        display: flex;
+        flex-direction: column;
+        font-family: Montserrat;
+        color: #261B6C;
+    }
+    p{
+        width: 80%;
+        font-size: 20px;
+        @include fontFamily;
+        color: #261B6C;
+    }
+    .aboutFood{
+        display: flex;
+        margin: 80px 0px;
+        gap: 20px;
+        img{
+            height: 300px;
+            width: 100%;
+        }
+    }
+}
+
+.productRange{
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+    
+  
+    .productBtn{
+        display: flex;
+        justify-content: center;
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include buttonStyle;
+            width: 250px;
+        }
+
+    }
+    .productContent{
+        
+        display: flex;
+        gap: 20px;
+        padding: 0 40px 0 40px;
+    }
+    h2{
+        color: #261B6C;
+        position: absolute;
+        font-family: Montserrat;
+        text-align: center;
+    }
+    .FoodCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        margin: 100px 0px;
+        img{
+           
+            height: 337px;
+            width: 337px;
+        }
+       h3{
+        color: white;
+        position: absolute;
+        font-family: Montserrat;
+        margin: 0px 30px 20px;
+       }
+    }
+
+}
+.factory{
+    .content{
+        padding: 0 40px 0 40px;
+        height: 100vh;
+        .contentContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .contentText{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100vh;
+                button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include buttonStyle;
+                    width: 250px;
+                }
+                h2{
+                    color: #261B6C;
+                    font-family: Montserrat;
+                }
+                p{
+                    width: 80%;
+                    font-size: 20px;
+                    @include fontFamily;
+                    color: #261B6C;
+                }
+            }
+        }
+    }
+}
+.donations{
+    background-color: #f8f8f8;
+    .content{
+        padding: 0 40px 0 40px;
+        height: 100vh;
+        .contentContainer{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            .contentText{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                height: 100vh;
+                margin-left: 70px;
+                button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include buttonStyle;
+                    width: 250px;
+                }
+                h2{
+                    color: #261B6C;
+                    font-family: Montserrat;
+                }
+                p{
+                    width: 80%;
+                    font-size: 20px;
+                    @include fontFamily;
+                    color: #261B6C;
+                }
+            }
         }
     }
 
 }
+.recipeSection{
+    .arrowBtn{
+        background-color: #B2904C;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    .RecipeInfo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h6{
+        font-family: Montserrat;
+       
+        span{
+            color: #B2904C; 
+            
+         }
+
+    }
+    .Tablist{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        border-bottom: 1px solid #261b6c3f;
+    }
+    
+}
+.kids{
+    margin: 90px 0px;
+    padding: 0 40px 0 40px;
+    .kidscontainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    background-image: url(./images/hero-image.png);
+   height:76vh ;
+  .KidsText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        font-family: '3dumbregular';
+        color: white;
+        font-size: 95px;
+    }
+    p{
+     text-align: center;
+     width: 70%;
+     font-size: 20px;
+     @include fontFamily;
+     color: white;
+ 
+ 
+    }
+    button{
+         height: 55px;
+         width: 180px;
+         background:#FF4655;
+         @include fontFamily();
+         font-weight: 750;
+         color: white;
+         display: flex;
+          justify-content: center;
+          align-items: center;
+ 
+ 
+    }
+  }
+   
+    img{
+        position: relative;
+        top: 40px;
+        width: 781px;
+        height: 835px;
+    }
+    }
+}
+
+.promotion{
+    margin: 90px 0px;
+    padding: 0 40px 0 40px;
+    .promotionContent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(./images/brownbg.png);
+        height: 48.5vh;
+        padding: 0 40px 0 40px;
+        img{
+            position: relative;
+            bottom: 25px;
+        }
+
+        h2{
+            color: white;
+            font-size: 50px;
+            font-family: Montserrat;
+        }
+        .buttonIn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+          
+        input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            padding: 0px;
+            width: 1000px;
+            height: 55px;
+            background: #C6A460;
+            padding: 0px 9px 0px 9px;
+            font-family: Montserrat;
+            color: white;
+            &placeholder{
+                color: white;
+            }
+        }
+          
+        button {
+            position: absolute;
+            top: 0;
+            border-radius: 5px;
+            right: 0px;
+            z-index: 2;
+            border: none;
+            top: 6px;
+            width: 80px;
+            height: 40px;
+            cursor: pointer;
+            color: white;
+             background: #261B6C;
+            transform: translateX(-9px);
+        }
+    }
+
+}
+footer{
+    padding: 0 40px 0 40px;
+    background-color: #261B6C;
+    height: auto;
+    .footerImg{
+        display: flex;
+        gap: 20px;
+    }
+    .top{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 20px;
+        .line{
+            height: 3px;
+            width: 600px;
+            background-color: white;
+        }
+        img{
+            height: 90px;
+        }
+    }
+    .middle{
+        display: flex;
+        gap: 30px;
+        margin-top: 40px;
+        h4{
+            color: white;
+            font-family: Montserrat;
+        }
+        p{
+            @include fontFamily();
+            font-weight: 400;
+            line-height: 31px;
+            letter-spacing: 0em;
+            text-align: left;
+            color:  #FFFFFF;
+
+        }
+        li{
+            list-style: none;
+            color:  #FFFFFF;
+            margin: 10px 0px;
+        }
+    }
+    .bottom{
+        display: flex;
+        .copyright{
+            margin:30px 0px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            .copyText{
+                display: flex;
+                justify-content: center;
+                align-items: center;   
+                gap: 20px;
+                img{
+                    position: relative;
+                    bottom:18px ;
+                }
+            }
+            p{
+                
+                color: white;
+                @include fontFamily();
+                font-weight: 700;
+            }
+            span{
+                color: #B2904C;
+            }
+        }
+    
+    }
+    .lines{
+        margin: 20px 0px;
+        width: 100%;
+        height: 1px;
+        background-color: white;
+    }
+
+}
+
+.mission{
+    padding: 0 40px 0 40px;
+    margin: 60px 0px;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .missionContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:  #F7F5E8;
+        height: 30vh;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        p{
+            width: 70%;
+            color: #261B6C;
+            @include fontFamily();
+        }
+        h4{
+            color: #261B6C;
+            font-family: Montserrat;
+
+        }
+    }
+
+}
+.values{
+    padding: 0 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3{
+        color: #261B6C;
+            font-family: Montserrat;
+
+    }
+    .CardsContainer{
+        margin: 50px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 100%;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .valueCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        h4{
+            color: #261B6C;
+                font-family: Montserrat;
+    
+        }
+        p{
+            width: 95%;
+            color: #261B6C;
+            @include fontFamily();
+            text-align: center;
+        }
+    }
+    
+}
+
+.ceo{
+    .content{
+        margin: 90px 0px;
+        padding: 0 40px 0 40px;
+        .contentContainer{
+            display: flex;
+            gap: 30px;
+            flex-direction: row-reverse;
+            justify-content: center;
+            .contentText{
+                display: flex;
+                flex-direction: column;
+            
+                h2{
+                    color: #261B6C;
+                    font-family: Montserrat;
+                    margin-bottom: 30px;
+                }
+                p{
+                    width: 90%;
+                    @include fontFamily;
+                    color: #261B6C;
+                }
+            }
+        }
+    }
+    .sign{
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+        h5{
+            color: #261B6C;
+            font-family: Montserrat;
+
+        }
+    }
+}
+
+.games{
+    margin: 90px 0px;
+    padding: 0 40px 0 40px;
+    .content{
+        padding: 0 40px 0 40px;
+        .contentContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .contentText{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include buttonStyle;
+                    width: 250px;
+                }
+                
+                h2{
+                    color: white;
+                    font-family: Montserrat;
+                }
+                p{
+                    width: 80%;
+                    font-size: 20px;
+                    @include fontFamily;
+                    color: white;
+                }
+            }
+        }
+    }
+    .wrapper{
+           background-color: #018BF1;
+           padding: 40px 0px;
+           margin-bottom: 60px;
+    }
+    .wrapper2{
+        padding: 40px 0px;
+        background: #FF4655;
+        margin-bottom: 60px;
+        .redbtn{
+            color: #FF4655;
+            background-color: white;
+        }
+       
+
+    }
+    .wrapper3{
+        background: #261B6C;
+        padding: 40px 0px;
+        margin-bottom: 60px;
+
+    }
+
+
+
+}
+
+
+
+.About{
+    background-image:url(/images/aboutimg.png) ;
+    @include Home-layout();
+
+    i{
+        animation: bounce  0.9s infinite;
+
+    }
+}
+.Products{
+    background-image:url(/images/productimg.png) ;
+    @include Home-layout();
+    i{
+        animation: bounce  0.9s infinite;
+
+    }
+}
+.Contact{
+    background-image:url(/images/unsliced-loaves-zoomed.jpg) ;
+    @include Home-layout();
+    i{
+        animation: bounce  0.9s infinite;
+
+    }
+}
+.Kids{
+    background-image: url(/images/kidsBg.png);
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@keyframes bounce{
+        5%{
+          transform: translateY(40px);
+        }
+}
+
+    .modal1{
+        max-width:750px ;
+        flex-wrap: wrap;
+    }
+
+

@@ -8,7 +8,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 20px;
+  margin: 20px 40px 10px;
 }
 nav ul {
   display: flex;
@@ -20,21 +20,20 @@ nav ul {
 nav ulhover {
   color: #B2904C;
 }
-nav ul li {
-  font-weight: 700;
-  font-size: 20px;
-}
-nav ul li a {
-  color: black;
+nav ul a {
+  color: #261B6C;
+  font-weight: bold;
   text-decoration: none;
+  font-family: "avenir_lt_std95_black";
 }
-nav ul li a:hover {
+nav ul a:hover {
   color: #B2904C;
 }
-nav button {
+nav ul button {
   height: 55px;
   width: 180px;
   border-radius: 5px;
+  margin: 20px 0px;
   border: none;
   background: #B2904C;
   color: white;
@@ -42,10 +41,753 @@ nav button {
   font-style: normal;
   text-transform: uppercase;
 }
-nav button a {
+nav ul button a {
   color: white;
   text-decoration: none;
+  font-family: "avenir_lt_std45_book";
 }
-nav button a:hover {
+nav ul button a:hover {
   color: black;
+}
+nav .fa-brands {
+  color: white;
+  font-size: 40px;
+  margin: 0px 20px;
+}
+nav .fa-brands:hover {
+  scale: 1.1;
+}
+
+.wrapper {
+  padding: 0px 40px;
+}
+.wrapper .billboard {
+  padding: 40px;
+  background-image: url(./images/hero-image.png);
+  border-radius: 5px;
+  height: 83vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .billboard h1 {
+  color: white;
+  font-size: 47px;
+  margin: 20px 0px;
+  font-family: Montserrat;
+}
+.wrapper .billboard p {
+  color: white;
+  width: 90%;
+  margin: 20px 0px;
+  font-family: "avenir_lt_std45_book";
+}
+.wrapper .billboard button {
+  height: 55px;
+  width: 180px;
+  border-radius: 5px;
+  margin: 20px 0px;
+  border: none;
+  background: #B2904C;
+  color: white;
+  font-weight: 750;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.wrapper .billboard button a {
+  color: white;
+  text-decoration: none;
+  font-family: "avenir_lt_std45_book";
+}
+.wrapper .billboard button a:hover {
+  color: black;
+}
+.wrapper .carousel-items {
+  display: flex;
+  transition: transform 0.5s;
+}
+.wrapper .carousel-items img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s;
+}
+.wrapper .carousel-items img.active {
+  transform: scale(1.2);
+}
+
+.aboutUS {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 70px 0px 50px;
+  padding: 0 40px 0 40px;
+}
+.aboutUS h1 {
+  font-family: Montserrat;
+}
+.aboutUS button {
+  height: 55px;
+  width: 180px;
+  border-radius: 5px;
+  margin: 20px 0px;
+  border: none;
+  background: #B2904C;
+  color: white;
+  font-weight: 750;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.aboutUS button a {
+  color: white;
+  text-decoration: none;
+  font-family: "avenir_lt_std45_book";
+}
+.aboutUS button a:hover {
+  color: black;
+}
+.aboutUS .aboutUsContent {
+  display: flex;
+}
+.aboutUS .headerText {
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat;
+  color: #261B6C;
+}
+.aboutUS p {
+  width: 80%;
+  font-size: 20px;
+  font-family: "avenir_lt_std45_book";
+  color: #261B6C;
+}
+.aboutUS .aboutFood {
+  display: flex;
+  margin: 80px 0px;
+  gap: 20px;
+}
+.aboutUS .aboutFood img {
+  height: 300px;
+  width: 100%;
+}
+
+.productRange {
+  display: flex;
+  justify-content: center;
+  background-color: #f8f8f8;
+}
+.productRange .productBtn {
+  display: flex;
+  justify-content: center;
+}
+.productRange .productBtn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 180px;
+  border-radius: 5px;
+  margin: 20px 0px;
+  border: none;
+  background: #B2904C;
+  color: white;
+  font-weight: 750;
+  font-style: normal;
+  text-transform: uppercase;
+  width: 250px;
+}
+.productRange .productBtn button a {
+  color: white;
+  text-decoration: none;
+  font-family: "avenir_lt_std45_book";
+}
+.productRange .productBtn button a:hover {
+  color: black;
+}
+.productRange .productContent {
+  display: flex;
+  gap: 20px;
+  padding: 0 40px 0 40px;
+}
+.productRange h2 {
+  color: #261B6C;
+  position: absolute;
+  font-family: Montserrat;
+  text-align: center;
+}
+.productRange .FoodCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  margin: 100px 0px;
+}
+.productRange .FoodCard img {
+  height: 337px;
+  width: 337px;
+}
+.productRange .FoodCard h3 {
+  color: white;
+  position: absolute;
+  font-family: Montserrat;
+  margin: 0px 30px 20px;
+}
+
+.factory .content {
+  padding: 0 40px 0 40px;
+  height: 100vh;
+}
+.factory .content .contentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.factory .content .contentContainer .contentText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+.factory .content .contentContainer .contentText button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 180px;
+  border-radius: 5px;
+  margin: 20px 0px;
+  border: none;
+  background: #B2904C;
+  color: white;
+  font-weight: 750;
+  font-style: normal;
+  text-transform: uppercase;
+  width: 250px;
+}
+.factory .content .contentContainer .contentText button a {
+  color: white;
+  text-decoration: none;
+  font-family: "avenir_lt_std45_book";
+}
+.factory .content .contentContainer .contentText button a:hover {
+  color: black;
+}
+.factory .content .contentContainer .contentText h2 {
+  color: #261B6C;
+  font-family: Montserrat;
+}
+.factory .content .contentContainer .contentText p {
+  width: 80%;
+  font-size: 20px;
+  font-family: "avenir_lt_std45_book";
+  color: #261B6C;
+}
+
+.donations {
+  background-color: #f8f8f8;
+}
+.donations .content {
+  padding: 0 40px 0 40px;
+  height: 100vh;
+}
+.donations .content .contentContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.donations .content .contentContainer .contentText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin-left: 70px;
+}
+.donations .content .contentContainer .contentText button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 180px;
+  border-radius: 5px;
+  margin: 20px 0px;
+  border: none;
+  background: #B2904C;
+  color: white;
+  font-weight: 750;
+  font-style: normal;
+  text-transform: uppercase;
+  width: 250px;
+}
+.donations .content .contentContainer .contentText button a {
+  color: white;
+  text-decoration: none;
+  font-family: "avenir_lt_std45_book";
+}
+.donations .content .contentContainer .contentText button a:hover {
+  color: black;
+}
+.donations .content .contentContainer .contentText h2 {
+  color: #261B6C;
+  font-family: Montserrat;
+}
+.donations .content .contentContainer .contentText p {
+  width: 80%;
+  font-size: 20px;
+  font-family: "avenir_lt_std45_book";
+  color: #261B6C;
+}
+
+.recipeSection .arrowBtn {
+  background-color: #B2904C;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.recipeSection .RecipeInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recipeSection h6 {
+  font-family: Montserrat;
+}
+.recipeSection h6 span {
+  color: #B2904C;
+}
+.recipeSection .Tablist {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  border-bottom: 1px solid rgba(38, 27, 108, 0.2470588235);
+}
+
+.kids {
+  margin: 90px 0px;
+  padding: 0 40px 0 40px;
+}
+.kids .kidscontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/hero-image.png);
+  height: 76vh;
+}
+.kids .kidscontainer .KidsText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.kids .kidscontainer .KidsText h2 {
+  font-family: "3dumbregular";
+  color: white;
+  font-size: 95px;
+}
+.kids .kidscontainer .KidsText p {
+  text-align: center;
+  width: 70%;
+  font-size: 20px;
+  font-family: "avenir_lt_std45_book";
+  color: white;
+}
+.kids .kidscontainer .KidsText button {
+  height: 55px;
+  width: 180px;
+  background: #FF4655;
+  font-family: "avenir_lt_std45_book";
+  font-weight: 750;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kids .kidscontainer img {
+  position: relative;
+  top: 40px;
+  width: 781px;
+  height: 835px;
+}
+
+.promotion {
+  margin: 90px 0px;
+  padding: 0 40px 0 40px;
+}
+.promotion .promotionContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/brownbg.png);
+  height: 48.5vh;
+  padding: 0 40px 0 40px;
+}
+.promotion .promotionContent img {
+  position: relative;
+  bottom: 25px;
+}
+.promotion .promotionContent h2 {
+  color: white;
+  font-size: 50px;
+  font-family: Montserrat;
+}
+.promotion .promotionContent .buttonIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.promotion .promotionContent input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  width: 1000px;
+  height: 55px;
+  background: #C6A460;
+  padding: 0px 9px 0px 9px;
+  font-family: Montserrat;
+  color: white;
+}
+.promotion .promotionContent inputplaceholder {
+  color: white;
+}
+.promotion .promotionContent button {
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+  right: 0px;
+  z-index: 2;
+  border: none;
+  top: 6px;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+  color: white;
+  background: #261B6C;
+  transform: translateX(-9px);
+}
+
+footer {
+  padding: 0 40px 0 40px;
+  background-color: #261B6C;
+  height: auto;
+}
+footer .footerImg {
+  display: flex;
+  gap: 20px;
+}
+footer .top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+}
+footer .top .line {
+  height: 3px;
+  width: 600px;
+  background-color: white;
+}
+footer .top img {
+  height: 90px;
+}
+footer .middle {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+footer .middle h4 {
+  color: white;
+  font-family: Montserrat;
+}
+footer .middle p {
+  font-family: "avenir_lt_std45_book";
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+}
+footer .middle li {
+  list-style: none;
+  color: #FFFFFF;
+  margin: 10px 0px;
+}
+footer .bottom {
+  display: flex;
+}
+footer .bottom .copyright {
+  margin: 30px 0px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+footer .bottom .copyright .copyText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+footer .bottom .copyright .copyText img {
+  position: relative;
+  bottom: 18px;
+}
+footer .bottom .copyright p {
+  color: white;
+  font-family: "avenir_lt_std45_book";
+  font-weight: 700;
+}
+footer .bottom .copyright span {
+  color: #B2904C;
+}
+footer .lines {
+  margin: 20px 0px;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+.mission {
+  padding: 0 40px 0 40px;
+  margin: 60px 0px;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mission .missionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7F5E8;
+  height: 30vh;
+}
+.mission .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.mission .wrapper p {
+  width: 70%;
+  color: #261B6C;
+  font-family: "avenir_lt_std45_book";
+}
+.mission .wrapper h4 {
+  color: #261B6C;
+  font-family: Montserrat;
+}
+
+.values {
+  padding: 0 40px 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.values h3 {
+  color: #261B6C;
+  font-family: Montserrat;
+}
+.values .CardsContainer {
+  margin: 50px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.values .valueCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+.values .valueCard h4 {
+  color: #261B6C;
+  font-family: Montserrat;
+}
+.values .valueCard p {
+  width: 95%;
+  color: #261B6C;
+  font-family: "avenir_lt_std45_book";
+  text-align: center;
+}
+
+.ceo .content {
+  margin: 90px 0px;
+  padding: 0 40px 0 40px;
+}
+.ceo .content .contentContainer {
+  display: flex;
+  gap: 30px;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.ceo .content .contentContainer .contentText {
+  display: flex;
+  flex-direction: column;
+}
+.ceo .content .contentContainer .contentText h2 {
+  color: #261B6C;
+  font-family: Montserrat;
+  margin-bottom: 30px;
+}
+.ceo .content .contentContainer .contentText p {
+  width: 90%;
+  font-family: "avenir_lt_std45_book";
+  color: #261B6C;
+}
+.ceo .sign {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+.ceo .sign h5 {
+  color: #261B6C;
+  font-family: Montserrat;
+}
+
+.games {
+  margin: 90px 0px;
+  padding: 0 40px 0 40px;
+}
+.games .content {
+  padding: 0 40px 0 40px;
+}
+.games .content .contentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.games .content .contentContainer .contentText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.games .content .contentContainer .contentText button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 180px;
+  border-radius: 5px;
+  margin: 20px 0px;
+  border: none;
+  background: #B2904C;
+  color: white;
+  font-weight: 750;
+  font-style: normal;
+  text-transform: uppercase;
+  width: 250px;
+}
+.games .content .contentContainer .contentText button a {
+  color: white;
+  text-decoration: none;
+  font-family: "avenir_lt_std45_book";
+}
+.games .content .contentContainer .contentText button a:hover {
+  color: black;
+}
+.games .content .contentContainer .contentText h2 {
+  color: white;
+  font-family: Montserrat;
+}
+.games .content .contentContainer .contentText p {
+  width: 80%;
+  font-size: 20px;
+  font-family: "avenir_lt_std45_book";
+  color: white;
+}
+.games .wrapper {
+  background-color: #018BF1;
+  padding: 40px 0px;
+  margin-bottom: 60px;
+}
+.games .wrapper2 {
+  padding: 40px 0px;
+  background: #FF4655;
+  margin-bottom: 60px;
+}
+.games .wrapper2 .redbtn {
+  color: #FF4655;
+  background-color: white;
+}
+.games .wrapper3 {
+  background: #261B6C;
+  padding: 40px 0px;
+  margin-bottom: 60px;
+}
+
+.About {
+  background-image: url(/images/aboutimg.png);
+  background-position: center;
+  background-size: cover;
+  height: 78vh;
+  border-radius: 10px;
+  font-family: "avenir_lt_std95_black";
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 40px 0 40px; /* 40px Left and Right */
+}
+.About i {
+  animation: bounce 0.9s infinite;
+}
+
+.Products {
+  background-image: url(/images/productimg.png);
+  background-position: center;
+  background-size: cover;
+  height: 78vh;
+  border-radius: 10px;
+  font-family: "avenir_lt_std95_black";
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 40px 0 40px; /* 40px Left and Right */
+}
+.Products i {
+  animation: bounce 0.9s infinite;
+}
+
+.Contact {
+  background-image: url(/images/unsliced-loaves-zoomed.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 78vh;
+  border-radius: 10px;
+  font-family: "avenir_lt_std95_black";
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 40px 0 40px; /* 40px Left and Right */
+}
+.Contact i {
+  animation: bounce 0.9s infinite;
+}
+
+.Kids {
+  background-image: url(/images/kidsBg.png);
+  background-position: center;
+  height: 90vh;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@keyframes bounce {
+  5% {
+    transform: translateY(40px);
+  }
+}
+.modal1 {
+  max-width: 750px;
+  flex-wrap: wrap;
 }

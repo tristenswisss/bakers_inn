@@ -1,17 +1,26 @@
 import logo from '../images/bakers-inn-logo.png'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 const Navbar =()=> {
+
+    const navLinkStyles = ( {isActive}) => {
+        return{
+            color: isActive ? 'rgb(45,1,111)' : 'rgb(168,160,197',
+
+        }
+    }
+
     return(
         <nav>
-            <Link to={'/'}><img src={logo} alt="logo"/></Link>
+            <NavLink to={'/'}><img src={logo} alt="logo"/></NavLink>
             <ul>    
-                    <li><Link to={'/About'}>About Us</Link> </li>
-                    <li><Link to={'/Products'}>Products</Link></li>      
-                    <li><Link to={'/Recipes'}>Recipes</Link></li>  
-                    <li><Link to={'/Kids'}>Kid's Corner</Link></li>  
-                    <button><Link to={'/Contact'}>Contact</Link></button> 
+                    <NavLink style={navLinkStyles} to={'/About'}>About Us</NavLink>
+                    <NavLink style={navLinkStyles} to={'/Products'}>Products</NavLink>   
+                    <NavLink style={navLinkStyles} to={'/Recipes'}>Recipes</NavLink>
+                    <NavLink style={navLinkStyles} to={'/Kids'}>Kid's Corner</NavLink>
+                    <NavLink style={navLinkStyles} to={'/Contact'}><button >Contact</button> </NavLink>
+                    
             </ul>
         </nav>
     )
