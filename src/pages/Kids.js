@@ -34,6 +34,7 @@ const Kids = ()=>{
                      imagess={require('../images/kisspng-pac-man-championship-edition-super-smash-bros-for-pac-man-5ac7fd0f47b9191484751415230558872938-u1U_ZbU1J-transformed 1.png')}
                     />
                 </div>
+            
            </section>
            <Footer/>
 

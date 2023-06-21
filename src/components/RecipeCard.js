@@ -2,6 +2,7 @@ import { Card,Stack,Heading,Image,Text, CardBody } from '@chakra-ui/react'
 import { ArrowForwardIcon } from '@chakra-ui/icons'
 import  { useState } from 'react';
 import {Modal, Button} from 'react-bootstrap';
+import RecipeModal from './RecipeModal';
 
 
 
@@ -11,7 +12,6 @@ const RecipeCard = (props)=>{
     
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [fullscreen, setFullscreen] = useState(true);
 
     return(
   <>
@@ -37,42 +37,7 @@ const RecipeCard = (props)=>{
                 </Stack>
           </CardBody>
     </Card>
-
-    <Modal fullscreen={fullscreen} show={show} onHide={handleClose}>
-      <Modal.Header closeButton>
-        <Modal.Title>Modal heading</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-            <div className='modal'>
-                <div className='col-lg-6'>
-                    <div className='modal1'>
-                    <img src={require('../images/sandwich-1.png')} alt=""/>
-                    <img src={require('../images/smallSandwich.png')} alt=""/>
-                    <img src={require('../images/smallSandwich.png')} alt=""/>
-                    <img src={require('../images/smallSandwich.png')} alt=""/>
-                     <img src={require('../images/smallSandwich.png')} alt=""/>
-
-                </div>
-               
-              
-
-               </div>
-               <div className='col-lg-6'>
-
-               </div>
-            
-
-            </div>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
-          Close
-        </Button>
-        <Button variant="primary" onClick={handleClose}>
-          Save Changes
-        </Button>
-      </Modal.Footer>
-    </Modal>
+    <RecipeModal show={show} handleClose={handleClose} />
 </>
 
     )

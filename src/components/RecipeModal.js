@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Modal, Button} from 'react-bootstrap'
-import  { useState } from 'react';
-import Form from 'react-bootstrap/Form';
 
-const RecipeModal = (props) => {
+const RecipeModal = ({show, handleClose}) => {
+
+
+  const [ModalImage , setModalImage]= useState([
+    {
+      Image: require('../images/SHMODAL.png'), id:1
+    },
+  ])
+  
    
-      const [show, setShow] = useState(false);
-    
-      const handleClose = () => setShow(false);
-      const handleShow = () => setShow(true);
     
       return (
         <>
@@ -16,26 +18,19 @@ const RecipeModal = (props) => {
     
           <Modal size="xl" show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
+              
             </Modal.Header>
             <Modal.Body>
-              <Form>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                  <Form.Label>Email address</Form.Label>
-                  <Form.Control
-                    type="email"
-                    placeholder="name@example.com"
-                    autoFocus
-                  />
-                </Form.Group>
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlTextarea1"
-                >
-                  <Form.Label>Example textarea</Form.Label>
-                  <Form.Control as="textarea" rows={3} />
-                </Form.Group>
-              </Form>
+                  
+                  {
+                    ModalImage.map((modal=>(
+                      <div className="modals" key={modal.id}>
+                            <img src={modal.Image} alt=""/>
+                      </div>
+                    )))
+                  }
+            
+                
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={handleClose}>

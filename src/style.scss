@@ -1,4 +1,8 @@
 @import "_mixins";
+$gray-color: #ddd;
+$medium-up: 600px;
+$large-up: 1000px;
+$global-radius: 4px;
 
 *{
     margin: 0;
@@ -645,8 +649,27 @@ footer{
         margin-bottom: 60px;
 
     }
+}
+.enquiries{
+    background: #F8F8F8;
+    margin: 140px 0px;
+    padding: 20px 40px 20px 40px;
+    .enqText{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        a{
+            text-decoration: underline;
+            color: #261B6C;
+            @include fontFamily;
+        }
+        h4{
+            color: #261B6C;
+            font-family: Montserrat;
 
-
+        }
+    }
 
 }
 
@@ -696,5 +719,323 @@ footer{
         max-width:750px ;
         flex-wrap: wrap;
     }
+
+    @mixin heading-font-regular {
+        font-family: 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;;
+    }
+    
+    
+    
+    main {
+      padding: 2em;  
+      float: left;
+      width: 100%;
+    }
+    
+   .table-section{
+    padding: 40px 40px;
+    margin: 90px 0px;
+   }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        float: left;
+       margin: 0 0 2em;
+        thead {
+            border-bottom: 3px solid #B2904C;
+            th {
+                padding: 0.35em 0 .35em;
+           font-weight: 400;
+                text-align: left;
+                @include heading-font-regular;
+                font-size: 1.25em;
+            }
+            
+        }
+    
+        tbody {
+            border-bottom: 3px solid #B2904C;
+            tr {
+                border-bottom: 2px solid #ddd;
+           
+                td {
+                    padding: .75em 0;
+    
+                    a {
+                        color: #B2904C;
+                        text-decoration: none;
+                        display: inline-block;
+                        margin: 0 .5em 0 0;
+                        &:hover, &:active, &:focus {
+                            color: darken(#B2904C, 10%);
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    
+        tfoot {
+            td {
+                padding: 0.35em 0 .35em;
+    
+                text-align: left;
+                @include heading-font-regular;
+                font-size: 1.25em;
+            }
+        }
+    }
+    
+    @media screen and (min-width: $large-up) {
+      table {
+            width: 100%;
+    
+            thead {
+                border-bottom: 3px solid #B2904C;
+                th {
+                }
+                
+            }
+    
+            tbody {
+                tr {
+                    border-bottom: 1px solid #ddd;
+                    td {
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+    ///RWD MIXIN BELOW
+    @mixin rwd-first {
+        display: block;
+      
+    
+      tbody {
+        border: none;
+      }
+            tbody, th, td, tr, tfoot {
+                display: block; 
+            }
+    
+            thead {
+                display: none;
+            }
+            tr {
+          float: left;
+          width: 100%;
+          margin: 0 0 1em;
+           border: 1px solid $gray-color;
+                box-shadow: 0px 2px 5px 0px grey;
+                border-radius: $global-radius;
+                border-top: 5px solid #B2904C;
+    
+                td {
+                    padding: .5em .5em .5em 50%;
+                    float:left;
+                width: 100%;
+                    &:before {
+                        width: 100%;
+                        display: block;
+                        float: left;
+                        padding: .5em .5em .5em 0;
+                        clear: both;
+                        margin: -.5em 0 0 -100%;
+                        @include heading-font-regular;
+                        font-size: 1.125em;
+    
+                    }
+                }
+            }
+    
+            tr:nth-of-type(even) {
+                //background: $gray-color;
+                td {
+                    
+                    &:before {
+                        
+                    }
+                }
+            }
+    }
+    
+    @mixin rwd-second {
+        display: table;
+        border: none;
+    
+      tbody {
+        border-bottom: none;
+      }
+        th, td {
+            display: table-cell; 
+        }
+    
+        tr {
+            border-left: 3px solid #B2904C;
+            display: table-row;
+            border: none;
+            border-bottom: none;
+        float: none;
+        margin: 0;
+            box-shadow: none;
+    
+            td {
+                padding: .75em 0 0.75em .25em;
+          float: none;
+          width: auto;
+    
+                &:before {
+                    padding: 0 !important;
+                }
+            }
+        }
+    
+        thead {
+            display: table-header-group;
+        }
+    
+        tbody,tfoot {
+            display: table-row-group;
+        }
+    
+        tr:nth-of-type(even) {
+            background:none;
+        }
+    }
+    
+    %responive-tables {
+        @include rwd-first;
+    
+        @media screen and (min-width: $medium-up) { 
+            @include rwd-second;
+            
+        }
+    }
+    
+    %responive-tables-large {
+        @include rwd-first;
+    
+        @media screen and (min-width: $large-up) { 
+            @include rwd-second;
+            
+        }
+    }
+    
+    @mixin responive-tables($headings...) {
+        $list: $headings;
+    
+        @each $list-headings in $list {
+            $i: index($list, $list-headings);
+            tbody tr td:nth-of-type(#{$i}):before { 
+                content: $list-headings; 
+            }
+            
+            @media screen and (min-width: $medium-up) { 
+                tbody tr td:nth-of-type(#{$i}):before { 
+                    content: ''; 
+                }
+            }
+    
+        }
+    }
+    
+    @mixin responive-tables-large($headings...) {
+        $list: $headings;
+    
+        @each $list-headings in $list {
+            $i: index($list, $list-headings);
+            tbody tr td:nth-of-type(#{$i}):before { 
+                content: $list-headings; 
+            }
+            
+            @media screen and (min-width: $large-up) { 
+                tbody tr td:nth-of-type(#{$i}):before { 
+                    content: ''; 
+                }
+            }
+    
+        }
+    }
+    
+    #rwd-table {
+        @extend %responive-tables;
+        @include responive-tables('Heading Col 1', 'Heading Col 2', 'Heading Col 3');
+    }
+    
+    #rwd-table-large {
+        @extend %responive-tables-large;
+        @include responive-tables-large('Heading Col 1', 'Heading Col 2', 'Heading Col 3','Heading Col 4');
+    }
+
+    .callback{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            color: #261B6C;
+            font-family: Montserrat;
+        }
+        p{
+            color: #261B6C;
+            @include fontFamily;
+
+        }
+    }
+    form{
+        margin: 50px 0px;
+       input,select{
+        width: 440px; 
+       }
+       div{
+        display: flex;
+        gap: 40px;
+        padding: 30px 0 0 0;
+       }
+       input{
+        padding: 20px;
+        width: 440px;
+        background: #F7F5E8;
+        @include fontFamily;
+       }
+       select{
+        padding: 20px;
+        width: 440px;
+        background: #F7F5E8;
+        @include fontFamily;
+
+       }
+       #full{
+        width: 100%;
+       }
+       textarea{
+        width: 100%;
+        height: 17vh;
+        padding: 30px;
+        background: #F7F5E8;
+        @include fontFamily;
+        color: black;
+
+       }
+       .area{
+        display: flex;
+        flex-direction: column;
+       }
+       button{
+        height: 55px;
+        width: 100%;
+        background:#C6A460;
+
+        @include fontFamily();
+        font-weight: 750;
+        color: white;
+        
+
+
+       }
+    }
+    
+    
 
 
