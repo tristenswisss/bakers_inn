@@ -43,7 +43,7 @@ const Footer = () => {
           <div><h4>Sitemap</h4></div>
           <div>
             <ol>
-              <li onClick={()=>navigate('/Home')}>Home</li>
+              <li onClick={()=>navigate('/')}>Home</li>
               <li onClick={()=>navigate('/About')}>About Us</li>
               <li onClick={()=>navigate('/Products')}>Products</li>
               <li onClick={()=>navigate('/Recipes')}>Recipes</li>

@@ -9,7 +9,9 @@ $global-radius: 4px;
     padding: 0;
     box-sizing: border-box;
 }
-
+.home{
+    overflow-x: hidden;
+}
 nav{
     display: flex;
     justify-content: space-between;
@@ -38,6 +40,12 @@ nav{
     button{
         @include buttonStyle;
     }
+}
+.close-btn{
+    display: none;
+}
+.hamburger{
+    display: none;
 }
 .fa-brands{
     color: white;
@@ -197,7 +205,7 @@ nav{
                 flex-direction: column;
                 justify-content: center;
                 height: 100vh;
-                button{
+                a{
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -217,7 +225,94 @@ nav{
             }
         }
     }
+   
+    
 }
+.modalip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        width: 70%;
+        @include fontFamily;
+        color: #261B6C;
+    }
+}
+.modaliHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   h2{
+    margin: 20px auto;
+    color: #261B6C;
+    font-family: Montserrat;
+   }
+   img{
+    height: 30px;
+    margin: 6px;
+   }
+}
+.factoryForm{
+    display: grid;
+   grid-template-rows: 1fr 1fr;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   div{
+    display: flex;
+    gap: 40px;
+    padding: 13px 0 0 0;
+   }
+   
+    .areaContent{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+            @include fontFamily;
+            color: #261B6C;
+            span{
+                color: #261B6C;
+                font-family: Montserrat;
+                text-decoration: underline;
+            }
+        }
+        label {
+           display: block;
+           @include fontFamily;
+           color: #261B6C;
+          }
+    }
+    input{
+        padding: 20px;
+        width: 530px;
+        background: #F7F5E8;
+        @include fontFamily;
+       }
+       select{
+        padding: 20px;
+        width: 530px;
+        background: #F7F5E8;
+        @include fontFamily;
+
+       }
+       .check{
+        width: 20px;
+       }
+
+}
+.closebtn{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 5px;
+    img{
+        height: 35px;
+    }
+}
+
+
 .donations{
     background-color: #f8f8f8;
     .content{
@@ -234,12 +329,15 @@ nav{
                 align-items: flex-start;
                 height: 100vh;
                 margin-left: 70px;
-                button{
+                span{
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     @include buttonStyle;
                     width: 250px;
+                }
+                .sign{
+                    display: none;
                 }
                 h2{
                     color: #261B6C;
@@ -403,6 +501,7 @@ footer{
     padding: 0 40px 0 40px;
     background-color: #261B6C;
     height: auto;
+    overflow-x: hidden;
     .footerImg{
         display: flex;
         gap: 20px;
@@ -672,6 +771,69 @@ footer{
     }
 
 }
+.ourProducts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2{
+        margin: 40px 0px;
+        color: #261B6C;
+            font-family: Montserrat;
+
+    }
+   
+    .breadContainer{
+        overflow-x: scroll;
+        width: 100%;
+        .valueCard{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+             background-color: #F7F5E8;
+             width: 520px;
+             height: auto;
+            
+             p{
+                width: 80%;
+                font-size: 20px;
+                @include fontFamily;
+                color: #261B6C;
+    
+    
+             }
+             h4{
+                color: #261B6C;
+                font-family: Montserrat;
+    
+             }
+        }
+    }
+   
+}
+.recipes{
+    height: 80vh;
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    h1{
+        color: #261B6C;
+                font-family: Montserrat;
+
+    }
+    p{
+        width: 80%;
+        font-size: 20px;
+        font-family: Montserrat;
+        color: #261B6C;
+     }
+     h5{
+        color: #B2904C;
+        font-family: Montserrat;
+
+     }
+}
+
 
 
 
@@ -745,9 +907,9 @@ footer{
             border-bottom: 3px solid #B2904C;
             th {
                 padding: 0.35em 0 .35em;
-           font-weight: 400;
+                color: #261B6C;
+                font-family: Montserrat;
                 text-align: left;
-                @include heading-font-regular;
                 font-size: 1.25em;
             }
             
@@ -757,9 +919,12 @@ footer{
             border-bottom: 3px solid #B2904C;
             tr {
                 border-bottom: 2px solid #ddd;
+                
            
                 td {
                     padding: .75em 0;
+                    @include fontFamily;
+                    color: #261B6C;
     
                     a {
                         color: #B2904C;
@@ -792,17 +957,14 @@ footer{
     
             thead {
                 border-bottom: 3px solid #B2904C;
-                th {
-                }
+                
                 
             }
     
             tbody {
                 tr {
                     border-bottom: 1px solid #ddd;
-                    td {
-                        
-                    }
+                   
                 }
             }
         }
@@ -1035,6 +1197,510 @@ footer{
 
        }
     }
+    .recipes{
+        margin-bottom: 100px;
+    }
+
+
+      .recipesContainer{
+        display: flex;
+        align-items: center;
+
+      }
+
+      .carousel {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      
+        .carousel-slide {
+          position: relative;
+          opacity: 1;
+          height: 300px;
+          width: 300px;
+
+      
+          img {
+            width: 100%;
+            height: 100%;
+          }
+      
+          .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.715);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            opacity: 1;
+            transition: opacity 0.5s;
+      
+            &.hide {
+              opacity: 0;
+            }
+          }
+      
+          .spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 40px;
+      
+            &::before,
+            &::after {
+              position: absolute;
+              content: '';
+              top: 6px;
+              background-color: #ff3e9e;
+              width: 28px;
+              height: 28px;
+              border-radius: 20px;
+              mix-blend-mode: multiply;
+              animation: tiktok 2s linear infinite;
+            }
+      
+            &::after {
+              background-color: #4de8f4;
+              animation-delay: 1s;
+            }
+          }
+        }
+      
+        @keyframes tiktok {
+          0%,
+          100% {
+            top: 6px;
+            left: 0px;
+            width: 28px;
+            height: 28px;
+            z-index: 0;
+            transform: scale(1);
+          }
+          25% {
+            top: 0px;
+            height: 40px;
+            width: 40px;
+            z-index: 1;
+            left: 20px;
+            transform: scale(1);
+          }
+          50% {
+            top: 6px;
+            width: 28px;
+            height: 28px;
+            left: 48px;
+          }
+          75% {
+            top: 8px;
+            left: 26px;
+            width: 24px;
+            height: 24px;
+            transform: scale(0.9);
+          }
+        }
+      }
+      .ceo{
+
+        span{
+            font-family: 'bulgattiregular';
+           position: relative;
+           bottom: 10px;
+           left: 18px;
+        }
+      }
+
+    @media screen and (max-width: 567px){
+        nav{
+            margin: 30px 0px;
+           ul{
+             display: none;
+           }
+           img{
+            width: 50%;
+             object-fit: contain;
+           }
+        }
+        .wrapper{
+            padding: 0;
+        }
+        .billboard{
+            height: 50vh;
+            display: flex;
+            flex-direction: column-reverse;
+            img{
+                display: none;
+            }
+        }
+        .aboutUsContent{
+            display: flex;
+             flex-direction:column;
+              p{
+                width: 100%;
+               }
+    }
+    .aboutFood{
+        overflow-x: scroll;
+    }
+    .productContent{
+        display: flex;
+        flex-direction: column;
+       margin: 0;
+       .FoodCard{
+        padding: 0;
+        margin:0px;
+       }
+       .FoodCard:first-child{
+        padding: 0;
+        margin: 40px 0px 0px;
+       }
+
+    }
+    .content{
+        margin: 0px;
+        padding: 0px;
+        height: 70vh;
+    }
+    .contentText{
+        margin: 0;
+        p{
+            width: 100%;
+        }
+    }
+    .factory .contentContainer{
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: normal;
+        justify-content: start;
+        margin: 0;
+        padding: 0;
+        p{
+            width: 100%;
+        }
+    }
+    .donations{
+        padding: 0;
+        .content{
+            margin: 0px;
+            padding: 0px;
+            height: 70vh;
+
+        }
+        img{
+            display: none;
+        }
+        .contentText{
+            margin: 0;
+            p{
+                width: 100%;
+            }
+        }
+       
+       
+    }
+    .kids{
+        padding: 0;
+        height: 100vh;
+        margin-bottom: 0px;
+       
+    }
+    .kidscontainer{
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0;
+    
+    }
+    .kids .kidscontainer img {
+        position: relative;
+         top: 60px; 
+        width: 781px;
+        height: 368px;
+    }
+    .kids .kidscontainer .KidsText h2{
+        font-size: 50px;
+    }
+    .tabs1{
+        display: flex;
+        flex-direction: column;
+    }
+    .promotion {
+        margin: 90px 0px;
+        padding: 0 ;
+    }
+    .promotion .promotionContent {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/brownbg.png);
+    height:auto;
+    padding: 0;
+}
+.promotion .promotionContent h2 {
+    color: white;
+    font-size: 33px;
+    margin: 0;
+    width: 90%;
+    font-family: Montserrat;
+}
+.promotion .promotionContent input {
+    display: flex; 
+    margin: 0px;
+    padding: 0px;
+    width: 95%;
+    height: 55px;
+    background: #C6A460;
+    padding: 0px 9px 0px 9px;
+    font-family: Montserrat;
+    color: white;
+}
+footer .middle {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+footer .top img {
+    height: 120px;
+    object-fit: contain;
+}
+footer .bottom .copyright {
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+.missionContainer{
+    display: flex;
+    flex-direction: column;
+}
+.mission {
+    padding: 0;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.ceo .content .contentContainer {
+    display: flex;
+    gap: 30px;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+.carousel .carousel-slide{
+    height: 150px;
+    width: 150px;
+    opacity: 1;
+}
+.recipesContainer{
+    display: flex;
+    flex-direction: column;
+}
+.recipes p {
+    width: 80%;
+    font-size: 15px;
+    font-family: Montserrat;
+    color: #261B6C;
+}
+.games {
+    margin: 90px 0px;
+    padding: 0 ;
+    height: auto;
+}
+.games .content .contentContainer .contentText p {
+    width: 100%;
+}
+.games .content .contentContainer {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+        display: none;
+    }
+}
+.Kids {
+    background-image:url(./images/kidsBg.png);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    width: 100%;
+    
+}
+form select {
+    padding: 20px;
+    width: 50%;
+    background: #F7F5E8;
+    font-family: "avenir_lt_std45_book";
+}
+form input {
+    padding: 20px;
+    width: 50%;
+    background: #F7F5E8;
+    font-family: "avenir_lt_std45_book";
+}
+.enquiries .enqText h4 {
+    font-size: 15px;
+    color: #261B6C;
+    font-family: Montserrat;
+}
+.enquiries .enqText a {
+    text-decoration: underline;
+    color: #261B6C;
+    font-family: "avenir_lt_std45_book";
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 40px 10px;
+  
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      z-index: 22;
+  
+      span {
+        width: 100%;
+        height: 2px;
+        background-color: #261b6c;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+  
+        &:first-child {
+          transform-origin: top;
+        }
+  
+        &:last-child {
+          transform-origin: bottom;
+        }
+      }
+  
+      &.open {
+        span {
+          &:first-child {
+            transform: rotate(45deg);
+          }
+  
+          &:nth-child(2) {
+            opacity: 0;
+          }
+  
+          &:last-child {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+    a {
+        color: #fff; /* Set the default color to white */
+      }
+  
+    ul {
+      display: none;
+      font: size 22px; 
+  
+      &.open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+          a {
+          color: #000; /* Set the color to black */
+        }
+      }
+    }
+  
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 20;
+      background-color: #c6a460;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+  
+      &.open {
+        opacity: 0.9;
+        pointer-events: auto;
+        a{
+            color:black;
+        }
+      }
+      
+  
+      .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 21;
+      }
+  
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        height: 100%;
+        margin-top: 50px;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+  
+        a {
+         
+          color: #000; /* Set the color to black */
+          font-weight: bold;
+          text-decoration: none;
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color: rgb(255, 255, 255);
+          }
+        }
+      }
+    }
+  }
+  
+
+  
+  
+   
+    
+        
+    }
+      
+      
+
+      
+     
+      
+     
     
     
 

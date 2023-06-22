@@ -28,18 +28,18 @@ const Tables = ()=>{
       
       
         <TabPanels marginTop='40px' >
-          <TabPanel display='flex' justifyContent='center' gap='40px'>
+          <TabPanel className='tabs1' display='flex' justifyContent='center' gap='40px'>
                 <RecipeCard recipeImg={shwarma}  text='Shwarma Sandwich'/>
                 <RecipeCard recipeImg={shwarma} text='Shwarma Sandwich'/>
                 <RecipeCard recipeImg={shwarma} text='Shwarma Sandwich'/>
           </TabPanel>
-          <TabPanel display='flex' justifyContent='center' gap='40px'>
+          <TabPanel className='tabs1' display='flex' justifyContent='center' gap='40px'>
                 <RecipeCard recipeImg={shortbread} text='Sweet Shortbread'/>
                 <RecipeCard recipeImg={shortbread} text='Sweet Shortbread'/>
                 <RecipeCard recipeImg={shortbread} text='Sweet Shortbread'/>
                 
           </TabPanel>
-          <TabPanel display='flex' justifyContent='center' gap='40px'>
+          <TabPanel className='tabs1' display='flex' justifyContent='center' gap='40px'>
                  <RecipeCard recipeImg={salmon} text='Salmon Strips'/>
                 <RecipeCard recipeImg={salmon} text='Salmon Strips'/>
                 <RecipeCard recipeImg={salmon} text='Salmon Strips'/>

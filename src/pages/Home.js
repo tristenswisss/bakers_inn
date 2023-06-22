@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Content from '../components/Content';
 import sandwich from '../images/sand.png'
@@ -15,7 +14,8 @@ import loaves from '../images/loaves-unsliced.png'
 import donation from '../images/donation.png';
 import Tables from '../components/tabs';
 import RecipeModal from '../components/RecipeModal';
-import Footer from '../components/Footer';
+import Modali from '../components/modal';
+import Modaltwo from '../components/donationModal';
 
 
 const Home = () => {
@@ -24,8 +24,7 @@ const Home = () => {
 
 
     return(
-        <div>
-          <Navbar/>
+        <div className='home'>
           <Hero/>
           <section className='aboutUS'>
               <div className='aboutUsContent' >
@@ -72,18 +71,20 @@ const Home = () => {
           <section className='factory'>
             <Content header={'Book A Factory Tour'} 
             ptext={'Keen on seeing how Baker’s inn products are made? Are you interested in a field trip day for your school’s class? Get in touch with us to book a tour of our factory that is closest to you. Fill in the booking form and we will get back to you.' }
-            bttn={'BOOK FACTORY TOUR'}
+            sendBtn={'BOOK FACTORY TOUR'}
             imagess={loaves}
             />
+            <Modali/>
           </section>
 
           <section className='donations'>
             <Content header={'Request A Donation'}
             ptext={'If you are holding an event that you wish to have us donate to, we’re more than glad to help. Fill in the donation request form for us to best understand how we can increase your event’s impact in the local community'}
-            bttn={'REQUEST DONATION'}
+            sendBttn={'REQUEST DONATION'}
             imagess={donation}
+           
             />
-
+            <Modaltwo/>
           </section>
 
           <section className='kids'>
@@ -131,11 +132,6 @@ const Home = () => {
 
 
           </section>
-
-          <Footer/>
-
-        
-
         </div>
   
     )

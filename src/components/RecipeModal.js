@@ -17,9 +17,10 @@ const RecipeModal = ({show, handleClose}) => {
 
     
           <Modal size="xl" show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-              
-            </Modal.Header>
+            <div className='closebtn'>
+              <img onClick={handleClose} alt='closebtn' src={require('../images/Group 23.png')} />
+              </div>
+            
             <Modal.Body>
                   
                   {
@@ -32,14 +33,6 @@ const RecipeModal = ({show, handleClose}) => {
             
                 
             </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-              <Button variant="primary" onClick={handleClose}>
-                Save Changes
-              </Button>
-            </Modal.Footer>
           </Modal>
         </>
       );

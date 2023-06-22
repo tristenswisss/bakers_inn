@@ -1,12 +1,10 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+
 import KeyboardDoubleArrowDownSharpIcon from '@mui/icons-material/KeyboardDoubleArrowDownSharp';
 
 
 const Contact = ()=>{
 return(
     <div>
-         <Navbar/>
          <div className="wrapper">
             <div className="Contact">
                 <h1>Contact</h1>
@@ -149,7 +147,7 @@ return(
 
                       </form>
            </section>
-           <Footer/>
+  
 
         
 

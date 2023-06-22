@@ -1,11 +1,10 @@
-import Navbar from "../components/Navbar";
+
 import KeyboardDoubleArrowDownSharpIcon from '@mui/icons-material/KeyboardDoubleArrowDownSharp';
 import BreadTab from "../components/BreadTab";
 
 const Products = ()=>{
     return(
         <div>
-             <Navbar/>
              <div className="wrapper">
             <div className="Products">
                 <h1>Products</h1>
@@ -14,7 +13,12 @@ const Products = ()=>{
             </div>
             <section className="ourProducts">
                 <h2>Our Products</h2>
-               <BreadTab/>
+                <div className="breadContainer">
+                <BreadTab/>
+                </div>
+                 
+               
+               
 
 
             </section>

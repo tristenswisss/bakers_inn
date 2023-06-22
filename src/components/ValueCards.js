@@ -6,8 +6,6 @@ const ValueCards = (props)=> {
             <img src={props.imgss} alt=""/>
             <h4>{props.valueTittle}</h4>
             <p>{props.ptext}</p>
-
-
         </div>
 
     )

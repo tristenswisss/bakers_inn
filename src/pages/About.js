@@ -1,13 +1,11 @@
-import Navbar from "../components/Navbar"
+
 import KeyboardDoubleArrowDownSharpIcon from '@mui/icons-material/KeyboardDoubleArrowDownSharp';
 import ValueCards from "../components/ValueCards";
 import Content from "../components/Content";
-import Footer from "../components/Footer";
 
 const About = ()=>{
     return(
         <div>
-            <Navbar/>
             <div className="wrapper">
             <div className="About">
                 <h1>About</h1>
@@ -72,8 +70,6 @@ const About = ()=>{
                      
                      />
             </section>
-
-            <Footer/>
             
 
         </div>

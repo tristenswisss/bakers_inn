@@ -14,13 +14,8 @@ const Hero = ()=>{
                 <a href="#aboutUsText"><button >READ MORE</button></a>
             </div>
 
-            <div className="col-lg-8">
-               <div className='carousel'>
-                <div className="carousel-items">
-                   <img src={breads} alt=""/>
-                   
-                </div>
-               </div>
+            <div className="col-lg-8">       
+                   <img src={breads} alt=""/>        
             </div>
             </div>
           </div>

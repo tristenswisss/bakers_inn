@@ -1,11 +1,9 @@
-import Navbar from "../components/Navbar";
+
 import Content from "../components/Content";
-import Footer from "../components/Footer";
 
 const Kids = ()=>{
     return(
         <div>
-             <Navbar/>
              <div className="Kids"> </div>
              <section className="games">
 
@@ -36,7 +34,6 @@ const Kids = ()=>{
                 </div>
             
            </section>
-           <Footer/>
 
         </div>
        
