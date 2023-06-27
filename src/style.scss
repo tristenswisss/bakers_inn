@@ -64,6 +64,7 @@ nav{
     .billboard{
         padding: 40px;
         background-image: url(./images/hero-image.png);
+        background-repeat:no-repeat;
         border-radius: 5px;
         height: 83vh;
         display: flex;
@@ -85,23 +86,26 @@ nav{
         button{
            @include buttonStyle;
         }
+        @include mediaQuery (968px,568px){
+            display:flex;
+            flex-direction:column-reverse;
+            align-items:center;
+            justify-content:center;
+        }
     }
-    
-      .carousel-items {
-        display: flex;
-        transition: transform 0.5s;
-      }
-      
-      .carousel-items img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        transition: transform 0.5s;
-      }
-      
-      .carousel-items img.active {
-        transform: scale(1.2);
-      }
+    img{
+        @include mediaQuery (567px){
+            display:none;
+        }
+    }
+    .col-lg-4{
+        @include mediaQuery (968px,568px){
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }   
+    }
 
 }
 .aboutUS{
@@ -118,6 +122,12 @@ nav{
     }
     .aboutUsContent{
         display: flex;
+        @include mediaQuery (968px,568px){
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
     }
     .headerText{
         display: flex;
@@ -126,10 +136,11 @@ nav{
         color: #261B6C;
     }
     p{
-        width: 80%;
+        width: 100%;
         font-size: 20px;
         @include fontFamily;
         color: #261B6C;
+        text-align:flex-end;
     }
     .aboutFood{
         display: flex;
@@ -139,10 +150,32 @@ nav{
             height: 300px;
             width: 100%;
         }
+        @include mediaQuery (968px,568px){
+            display:flex;
+            overflow-x:scroll;
+            
+        }
+    .aboutUsText{
+        @include mediaQuery (968px,568px){
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
     }
+    
+    }
+    @include mediaQuery (968px,568px){
+        margin: 70px 0px -50px;
+    }
+    @include mediaQuery (567px){
+        margin: 70px 0px -50px;
+    }
+   
+    
 }
 
 .productRange{
+    padding: 30px 0px;
     display: flex;
     justify-content: center;
     background-color: #f8f8f8;
@@ -177,7 +210,7 @@ nav{
         flex-direction: column;
         justify-content: flex-end;
         position: relative;
-        margin: 100px 0px;
+        margin: 70px 0px 40px;
         img{
            
             height: 337px;
@@ -222,6 +255,20 @@ nav{
                     @include fontFamily;
                     color: #261B6C;
                 }
+                @include mediaQuery (567px){
+                   height:80vh;
+                }
+                @include mediaQuery (992px,568px){
+                   height:52vh;
+                                     
+                }
+
+
+            }
+            @include mediaQuery (992px,568px){
+                display:flex;
+             flex-direction:column-reverse;
+                                 
             }
         }
     }
@@ -289,12 +336,29 @@ nav{
         width: 530px;
         background: #F7F5E8;
         @include fontFamily;
+        @include mediaQuery (992px,568px){
+           width:50%;
+                             
+        }
+        @include mediaQuery (567px){
+            width:50%;
+                              
+         }
+        
        }
        select{
         padding: 20px;
         width: 530px;
         background: #F7F5E8;
         @include fontFamily;
+        @include mediaQuery (992px,568px){
+            width:50%;
+                              
+         }
+         @include mediaQuery (567px){
+             width:50%;
+                               
+          }
 
        }
        .check{
@@ -349,8 +413,24 @@ nav{
                     @include fontFamily;
                     color: #261B6C;
                 }
+                @include mediaQuery (992px,568px){
+                   height:52vh;
+                }
+                @include mediaQuery (567px){
+                   height:80vh;
+                }
+               
+            }
+            @include mediaQuery (992px,568px){
+                display:flex;
+                flex-direction:column-reverse;
+               
             }
         }
+      
+    }
+    @include mediaQuery (992px,568px){
+       
     }
 
 }
@@ -477,6 +557,10 @@ nav{
             &placeholder{
                 color: white;
             }
+            @include mediaQuery (992px,568px){
+               width:100%;
+                 
+              }
         }
           
         button {
@@ -494,7 +578,17 @@ nav{
              background: #261B6C;
             transform: translateX(-9px);
         }
+        @include mediaQuery (992px,568px){
+           display:flex;
+           flex-direction:column-reverse;
+           height:76vh;
+           
+        }
     }
+    @include mediaQuery (992px,568px){
+       padding:0;
+        
+     }
 
 }
 footer{
@@ -507,6 +601,7 @@ footer{
         gap: 20px;
     }
     .top{
+        margin-top:20px;
         display: flex;
         align-items: flex-end;
         justify-content: center;
@@ -541,7 +636,14 @@ footer{
             list-style: none;
             color:  #FFFFFF;
             margin: 10px 0px;
+            @include mediaQuery (992px,568px){
+                display:flex;   
+               }
         }
+        @include mediaQuery (992px,568px){
+            display:flex;
+            flex-direction:column    
+           }
     }
     .bottom{
         display: flex;
@@ -569,7 +671,15 @@ footer{
             span{
                 color: #B2904C;
             }
+            @include mediaQuery (992px,568px){
+                display:flex;
+                flex-direction:column    
+               }
         }
+        @include mediaQuery (992px,568px){
+            display:flex;
+            flex-direction:column    
+           }
     
     }
     .lines{
@@ -649,6 +759,11 @@ footer{
             color: #261B6C;
             @include fontFamily();
             text-align: center;
+            @include mediaQuery (992px,568px){
+                width:60%;
+                                   
+              }
+             
         }
     }
     
@@ -678,6 +793,10 @@ footer{
                     color: #261B6C;
                 }
             }
+            @include mediaQuery (992px,568px){
+                display:flex;
+                flex-direction:column-reverse;    
+               }
         }
     }
     .sign{
@@ -723,6 +842,11 @@ footer{
                     @include fontFamily;
                     color: white;
                 }
+            }
+            @include mediaQuery (992px,568px){
+                display:flex;
+             flex-direction:column;
+                                 
             }
         }
     }
@@ -799,6 +923,10 @@ footer{
                 font-size: 20px;
                 @include fontFamily;
                 color: #261B6C;
+                @include mediaQuery (567px){
+                    width:60%;
+                                       
+                  }
     
     
              }
@@ -807,6 +935,10 @@ footer{
                 font-family: Montserrat;
     
              }
+             @include mediaQuery (567px){
+                width:auto;
+                                   
+              }
         }
     }
    
@@ -869,6 +1001,10 @@ footer{
     width: 100%;
     background-size: contain;
     background-repeat: no-repeat;
+    @include mediaQuery (992px,568px){
+      height:60vh;
+                         
+    }
 }
 
 @keyframes bounce{
@@ -1160,6 +1296,10 @@ footer{
         width: 440px;
         background: #F7F5E8;
         @include fontFamily;
+        @include mediaQuery (992px,568px){
+            width:50%;
+                               
+          }
        }
        select{
         padding: 20px;
@@ -1205,6 +1345,11 @@ footer{
       .recipesContainer{
         display: flex;
         align-items: center;
+        @include mediaQuery (992px,568px){
+            display:flex;
+         flex-direction:column;
+                             
+        }
 
       }
 
@@ -1430,10 +1575,12 @@ footer{
     }
     .kids .kidscontainer .KidsText h2{
         font-size: 50px;
+        margin-top: 6px;
     }
     .tabs1{
         display: flex;
-        flex-direction: column;
+       flex-direction:column;
+       
     }
     .promotion {
         margin: 90px 0px;
@@ -1670,7 +1817,6 @@ nav {
         margin-top: 50px;
         padding: 0;
         list-style: none;
-        text-align: center;
   
         a {
          
@@ -1685,15 +1831,8 @@ nav {
         }
       }
     }
-  }
-  
-
-  
-  
-   
-    
-        
-    }
+  }       
+}
       
       
 

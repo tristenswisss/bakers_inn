@@ -1,7 +1,6 @@
 import { Card,Stack,Heading,Image,Text, CardBody } from '@chakra-ui/react'
 import { ArrowForwardIcon } from '@chakra-ui/icons'
 import  { useState } from 'react';
-import {Modal, Button} from 'react-bootstrap';
 import RecipeModal from './RecipeModal';
 
 

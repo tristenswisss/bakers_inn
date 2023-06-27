@@ -74,6 +74,7 @@ nav .fa-brands:hover {
 .wrapper .billboard {
   padding: 40px;
   background-image: url(./images/hero-image.png);
+  background-repeat: no-repeat;
   border-radius: 5px;
   height: 83vh;
   display: flex;
@@ -112,19 +113,26 @@ nav .fa-brands:hover {
 .wrapper .billboard button a:hover {
   color: black;
 }
-.wrapper .carousel-items {
-  display: flex;
-  transition: transform 0.5s;
+@media (max-width: 968px) and (min-width: 568px) {
+  .wrapper .billboard {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
 }
-.wrapper .carousel-items img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: transform 0.5s;
+@media (max-width: 567px) {
+  .wrapper img {
+    display: none;
+  }
 }
-.wrapper .carousel-items img.active {
-  transform: scale(1.2);
+@media (max-width: 968px) and (min-width: 568px) {
+  .wrapper .col-lg-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .aboutUS {
@@ -160,6 +168,14 @@ nav .fa-brands:hover {
 .aboutUS .aboutUsContent {
   display: flex;
 }
+@media (max-width: 968px) and (min-width: 568px) {
+  .aboutUS .aboutUsContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .aboutUS .headerText {
   display: flex;
   flex-direction: column;
@@ -167,10 +183,11 @@ nav .fa-brands:hover {
   color: #261B6C;
 }
 .aboutUS p {
-  width: 80%;
+  width: 100%;
   font-size: 20px;
   font-family: "avenir_lt_std45_book";
   color: #261B6C;
+  text-align: flex-end;
 }
 .aboutUS .aboutFood {
   display: flex;
@@ -181,8 +198,32 @@ nav .fa-brands:hover {
   height: 300px;
   width: 100%;
 }
+@media (max-width: 968px) and (min-width: 568px) {
+  .aboutUS .aboutFood {
+    display: flex;
+    overflow-x: scroll;
+  }
+}
+@media (max-width: 968px) and (min-width: 568px) {
+  .aboutUS .aboutFood .aboutUsText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 968px) and (min-width: 568px) {
+  .aboutUS {
+    margin: 70px 0px -50px;
+  }
+}
+@media (max-width: 567px) {
+  .aboutUS {
+    margin: 70px 0px -50px;
+  }
+}
 
 .productRange {
+  padding: 30px 0px;
   display: flex;
   justify-content: center;
   background-color: #f8f8f8;
@@ -231,7 +272,7 @@ nav .fa-brands:hover {
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  margin: 100px 0px;
+  margin: 70px 0px 40px;
 }
 .productRange .FoodCard img {
   height: 337px;
@@ -292,6 +333,22 @@ nav .fa-brands:hover {
   font-size: 20px;
   font-family: "avenir_lt_std45_book";
   color: #261B6C;
+}
+@media (max-width: 567px) {
+  .factory .content .contentContainer .contentText {
+    height: 80vh;
+  }
+}
+@media (max-width: 992px) and (min-width: 568px) {
+  .factory .content .contentContainer .contentText {
+    height: 52vh;
+  }
+}
+@media (max-width: 992px) and (min-width: 568px) {
+  .factory .content .contentContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .modalip {
@@ -358,11 +415,31 @@ nav .fa-brands:hover {
   background: #F7F5E8;
   font-family: "avenir_lt_std45_book";
 }
+@media (max-width: 992px) and (min-width: 568px) {
+  .factoryForm input {
+    width: 50%;
+  }
+}
+@media (max-width: 567px) {
+  .factoryForm input {
+    width: 50%;
+  }
+}
 .factoryForm select {
   padding: 20px;
   width: 530px;
   background: #F7F5E8;
   font-family: "avenir_lt_std45_book";
+}
+@media (max-width: 992px) and (min-width: 568px) {
+  .factoryForm select {
+    width: 50%;
+  }
+}
+@media (max-width: 567px) {
+  .factoryForm select {
+    width: 50%;
+  }
 }
 .factoryForm .check {
   width: 20px;
@@ -435,7 +512,22 @@ nav .fa-brands:hover {
   font-family: "avenir_lt_std45_book";
   color: #261B6C;
 }
-
+@media (max-width: 992px) and (min-width: 568px) {
+  .donations .content .contentContainer .contentText {
+    height: 52vh;
+  }
+}
+@media (max-width: 567px) {
+  .donations .content .contentContainer .contentText {
+    height: 80vh;
+  }
+}
+@media (max-width: 992px) and (min-width: 568px) {
+  .donations .content .contentContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 .recipeSection .arrowBtn {
   background-color: #B2904C;
   width: 60px;
@@ -550,6 +642,11 @@ nav .fa-brands:hover {
 .promotion .promotionContent inputplaceholder {
   color: white;
 }
+@media (max-width: 992px) and (min-width: 568px) {
+  .promotion .promotionContent input {
+    width: 100%;
+  }
+}
 .promotion .promotionContent button {
   position: absolute;
   top: 0;
@@ -565,6 +662,18 @@ nav .fa-brands:hover {
   background: #261B6C;
   transform: translateX(-9px);
 }
+@media (max-width: 992px) and (min-width: 568px) {
+  .promotion .promotionContent {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 76vh;
+  }
+}
+@media (max-width: 992px) and (min-width: 568px) {
+  .promotion {
+    padding: 0;
+  }
+}
 
 footer {
   padding: 0 40px 0 40px;
@@ -577,6 +686,7 @@ footer .footerImg {
   gap: 20px;
 }
 footer .top {
+  margin-top: 20px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -612,6 +722,17 @@ footer .middle li {
   color: #FFFFFF;
   margin: 10px 0px;
 }
+@media (max-width: 992px) and (min-width: 568px) {
+  footer .middle li {
+    display: flex;
+  }
+}
+@media (max-width: 992px) and (min-width: 568px) {
+  footer .middle {
+    display: flex;
+    flex-direction: column;
+  }
+}
 footer .bottom {
   display: flex;
 }
@@ -638,6 +759,18 @@ footer .bottom .copyright p {
 }
 footer .bottom .copyright span {
   color: #B2904C;
+}
+@media (max-width: 992px) and (min-width: 568px) {
+  footer .bottom .copyright {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 992px) and (min-width: 568px) {
+  footer .bottom {
+    display: flex;
+    flex-direction: column;
+  }
 }
 footer .lines {
   margin: 20px 0px;
@@ -714,6 +847,11 @@ footer .lines {
   font-family: "avenir_lt_std45_book";
   text-align: center;
 }
+@media (max-width: 992px) and (min-width: 568px) {
+  .values .valueCard p {
+    width: 60%;
+  }
+}
 
 .ceo .content {
   margin: 90px 0px;
@@ -738,6 +876,12 @@ footer .lines {
   width: 90%;
   font-family: "avenir_lt_std45_book";
   color: #261B6C;
+}
+@media (max-width: 992px) and (min-width: 568px) {
+  .ceo .content .contentContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 .ceo .sign {
   display: flex;
@@ -799,6 +943,12 @@ footer .lines {
   font-size: 20px;
   font-family: "avenir_lt_std45_book";
   color: white;
+}
+@media (max-width: 992px) and (min-width: 568px) {
+  .games .content .contentContainer {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .games .wrapper {
   background-color: #018BF1;
@@ -870,9 +1020,19 @@ footer .lines {
   font-family: "avenir_lt_std45_book";
   color: #261B6C;
 }
+@media (max-width: 567px) {
+  .ourProducts .breadContainer .valueCard p {
+    width: 60%;
+  }
+}
 .ourProducts .breadContainer .valueCard h4 {
   color: #261B6C;
   font-family: Montserrat;
+}
+@media (max-width: 567px) {
+  .ourProducts .breadContainer .valueCard {
+    width: auto;
+  }
 }
 
 .recipes {
@@ -954,6 +1114,11 @@ footer .lines {
   width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
+}
+@media (max-width: 992px) and (min-width: 568px) {
+  .Kids {
+    height: 60vh;
+  }
 }
 
 @keyframes bounce {
@@ -1271,6 +1436,11 @@ form input {
   background: #F7F5E8;
   font-family: "avenir_lt_std45_book";
 }
+@media (max-width: 992px) and (min-width: 568px) {
+  form input {
+    width: 50%;
+  }
+}
 form select {
   padding: 20px;
   width: 440px;
@@ -1308,6 +1478,12 @@ form button {
 .recipesContainer {
   display: flex;
   align-items: center;
+}
+@media (max-width: 992px) and (min-width: 568px) {
+  .recipesContainer {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .carousel {
@@ -1514,6 +1690,7 @@ form button {
   }
   .kids .kidscontainer .KidsText h2 {
     font-size: 50px;
+    margin-top: 6px;
   }
   .tabs1 {
     display: flex;
@@ -1737,7 +1914,6 @@ form button {
     margin-top: 50px;
     padding: 0;
     list-style: none;
-    text-align: center;
   }
   nav .overlay ul a {
     color: #000; /* Set the color to black */

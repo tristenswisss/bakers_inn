@@ -12,7 +12,7 @@ const Footer = () => {
           <div className='line'></div>
         </div>
         <div className="middle">
-          <div class="col-md-5">
+          <div class="col-lg-5 col-md-12">
             <div><h4>Instagram Feed</h4></div>
             <div className='footerImg'><img className='img-fluid' src={require('../images/feed-1.png')} alt=""/>
             <img className='img-fluid' src={require('../images/feed-2.png')} alt=""/>
@@ -21,12 +21,12 @@ const Footer = () => {
             <div></div>
 
           </div>
-          <div class="col-md-2">
+          <div class="col-lg-2 col-md-12">
           <div> <h4>Our Location</h4></div>
           <div> <p>1 Shepperton Road, Graniteside Harare, Zimbabwe.</p></div>
             
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-12">
           <div><h4>Get In Touch With Us</h4></div>
           <div>
             <ol>
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
             
           </div>
-          <div class="col-md-2">
+          <div class="col-lg-2 col-md-12">
           <div><h4>Sitemap</h4></div>
           <div>
             <ol>

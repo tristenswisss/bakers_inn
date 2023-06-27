@@ -15,7 +15,7 @@ const About = ()=>{
             </div>
             <section className="mission">
                 <div className="missionContainer">
-                    <div className="col-lg-6 ">
+                    <div className="col-lg-6">
                         <div className="wrapper">
                         <div>
                             <img src={require('../images/flag.png')} alt=""/>

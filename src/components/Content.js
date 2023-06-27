@@ -18,7 +18,7 @@ const Content = (props)=>{
     return(
         <div className="content">
             <div className="contentContainer">
-                <div className="col-lg-6">
+                <div className="col-lg-6 col-md-12">
                     <div className="contentText">
                         <h2>{props.header}</h2>
                         <p>{props.ptext}</p>
@@ -36,7 +36,7 @@ const Content = (props)=>{
 
 
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 col-md-12">
                     <img src={props.imagess} alt="" className="img-fluid"/>
                     
                 </div>
