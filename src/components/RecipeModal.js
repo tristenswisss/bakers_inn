@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import {Modal, Button} from 'react-bootstrap'
+import {Modal} from 'react-bootstrap'
 
 const RecipeModal = ({show, handleClose}) => {
 
 
-  const [ModalImage , setModalImage]= useState([
+  const [ModalImage]= useState([
     {
       Image: require('../images/SHMODAL.png'), id:1
     },
